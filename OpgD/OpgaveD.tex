@@ -1,0 +1,37 @@
+Følgende udtryk er oversat og analyseret fra prædikatlogik under fortolkningen $\mathcal{R}$:\\
+
+dom($\mathcal{R}$)$=$ de reelle tal.\\
+De anvendte matematiske symboler har konventionel betydning i fortolkningen $\mathcal{R}$. \\
+\\
+1) $\forall x(x=x^2 \rightarrow x < 0)$:
+\begin{center}
+Alle reelle tal, hvor tallet er lig tallet selv kvadreret, er negative.
+\end{center}
+\hspace{7 cm} - Nej, da $0 = 0^2$ og $1=1^2$. \\
+
+\newpage
+2) $\forall x(x>0 \rightarrow x^2 > x)$:
+\begin{center}
+Alle reelle positive tal kvadreret, er større end tallet selv.
+\end{center}
+\hspace{7 cm} - Nej, da $1 \nless 1^2$.  \\
+
+3) $\forall x(x=0 \vee \neg(x+x=x))$:
+\begin{center}
+Alle reelle tal er enten nul eller ulig det dobbelte af tallet selv, dvs. $x=0$ eller $2x \ne x$.
+\end{center}
+\hspace{7 cm} - Ja, da kun $0$ er løsning til $2x=x$.  \\
+
+4) $\exists x\forall y(x>y)$:
+\begin{center}
+%For et hvert reelt tal findes der et andet større reelt tal.
+Der findes et reelt tal, som er større end alle reelle tal.
+\end{center}
+%\hspace{7 cm} - Ja, da $\infty$ ikke er del af $\mathds{R}$.  \\
+\hspace{7 cm} Nej, da $\infty$ ikke er del af $\mathds{R}$.
+
+5) $\forall x\forall y(x>y \rightarrow \exists z(x>z \wedge z>y))$:
+\begin{center}
+For alle reelle talpar, hvor det ene tal er større end det andet,\\ findes et tredje reelt tal med en værdi mellem de to.
+\end{center}
+\hspace{7 cm} - Ja. Der er ingen grænse for decimaler i $\mathds{R}$. Det er altid muligt at finde et reelt tal i intervallet $]x,y[$ for $y>x$.

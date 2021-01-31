@@ -1,0 +1,109 @@
+Opgaven er givet ved, at der findes 2 typer af mennesker på en ø. Sandsigere som \textbf{altid} siger sandheden, og Løgnere som \textbf{altid} lyver. Ellers er menneskene identiske.\\
+\\
+a) Opgaven lyder:
+
+\begin{center}
+\textit{Engang besøgte en fremmed øen. Der mødte han to af øens indbyggere, Peter og Signe. Han spurgte dem: “Er nogen af jer en løgner?”. “Mindst en af os er løgner”, svarede Peter. Hvad er Peter og Signe (sandsigere eller løgnere)?}
+\end{center}
+
+Vi tildeler følgende prædikatsymboler:\\
+$p$: Peter er sandsiger.\\ $s$: Signe er sandsiger.\\
+\\
+Udsagnet kan dermed skrives som formlen: 
+
+\begin{equation}
+p \leftrightarrow \neg (p \wedge s)
+\label{eq:E1}
+\end{equation}
+
+Ved at stille en sandhedstabel op, kan vi se hvilken sandhedstildeling der tilfredstiller udsagnet.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$p$ & $s$ & Formel \eqref{eq:E1} \\ \hline
+T & T & F  \\
+T & F & T  \\
+F & T & F  \\
+F & F & F 
+\end{tabular}
+\end{table}
+
+Det kan konstateres at Peter er en sandsiger og Signe er en løgner.\\
+\\
+\\
+
+b) Opgaven lyder: 
+
+\begin{center}
+\textit{Mens den fremmede vandrede rundt på øen mødte han to andre indbyggere, Anne og Bob. Han spurgte Anne: “Er nogen af jer en sandsiger?”. “Hvis Bob er en løgner, så er jeg også en løgner”, svarede Anne. Hvad er Anne og Bob?}
+\end{center}
+
+Ligesom før tildeles der prædikatsymboler:\\
+$a$: Anne er sandsiger. \\
+$b$: Bob er sandsiger. \\
+\\
+
+Udsagnet kan dermed skrives som formlen: 
+
+\begin{equation}
+a \leftrightarrow (\neg b \rightarrow \neg a)
+\label{eq:E2}
+\end{equation}
+
+Igen kigger vi på sandhedstabellen:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c}
+$a$ & $b$ & Formel \eqref{eq:E2} \\ \hline
+T & T & T  \\
+T & F & F  \\
+F & T & F  \\
+F & F & F 
+\end{tabular}
+\end{table}
+
+Vi ser at udsagnet kun går op, hvis både Anne og Bob er sandsigere.\\
+\\
+
+c) Opgaven lyder:
+
+\begin{center}
+\textit{Den fremmede vandrede videre. Om aftenen begyndte han at søge efter ly for natten, men var meget forsigtig, for han vidste at nogen af øens indbyggere var kannibaler, og det var ikke muligt at skelne dem ved deres udseende. Han mødte så tre af øens indbyggere, Carsten, Diana og Erika. Han spurgte Carsten: “Hvor mange af jer er sandsigere?”. “Flam flim”, svarede Carsten på sit eget sprog. “Hvad sagde han?”, spurgte den fremmede Diana. Han sagde “Kun én”, svarede Diana. “Stol ikke på Diana, hun er en løgner. Kom med mig, jeg er ikke en kannibal”, sagde Erika. “Nej, kom med mig, jeg er ikke en kannibal”, sagde Diana. Hvad skal den fremmede gøre?}
+\end{center}
+
+Prædikatsymboler tildelt: \\
+$d$: Diana er sandsiger. \\
+$c$: Carsten er sandsiger.\\
+$e$: Erica er sandsiger.\\
+\\
+
+De første to udsagns skrives ved formlerne: 
+
+\begin{gather}
+    d \leftrightarrow ( c \leftrightarrow ( e \oplus (c \vee d) \wedge \neg (c \wedge d))) \label{eq:E3a} \\ 
+    e \leftrightarrow \neg d  \label{eq:E3b}
+\end{gather} 
+
+Den komplekse højreside i formel \eqref{eq:E3a} kommer fra udsagnet "kun én". Det kan se lidt svært ud, men det er let at tjekke. \\
+Idéen med fx $d \leftrightarrow (\text{Dianas udsagn})$ er, Dianas udsagn er sandt, hvis og kun hvis Diana er sandsiger. Erika og Diana benægter hinandens udsagn, derfor $e \leftrightarrow \neg d$. Sandhedstabellen kommer til at se ud som følgende:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c|c|c|c|c|c}
+d & c & e & Formel \eqref{eq:E3a} & Formel \eqref{eq:E3b} & Formel \eqref{eq:E3a} $\wedge$ Formel \eqref{eq:E3b}\\ \hline
+T & T & T & F      & F  & F \\
+T & T & F & F      & T  & F\\
+T & F & T & T      & F  & F   \\
+T & F & F & F      & T  & F    \\
+F & T & T & T      & T  & T    \\
+F & T & F & F      & F  & F    \\
+F & F & T & T      & F  & F    \\
+F & F & F & F      & F  & F   
+\end{tabular}
+\end{table}
+
+På samme måde som tidligere, ser vi at der kun er én sandhedstildeling der tilfredsstiller begge udsagn (formlerne \eqref{eq:E3a} og \eqref{eq:E3b}). Altså må Diana være en løgner, mens Carsten og Erika er sandsigere.\\
+\\
+Fra de sidste udsagn i opgaven ser vi, at Diana er en kannibal, og at den fremmede skal følge med Erika som ikke er kannibal.

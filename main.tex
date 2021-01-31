@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{mathtools} 
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={140mm,227mm},
+ left=35mm,
+ top=35mm,
+ }
+
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{bm}
+
+\setlength{\parindent}{0pt}
+\numberwithin{figure}{section}
+% equation number format: in section 1, (1.1), (1.2) ..
+\usepackage{amsmath}
+\usepackage{ dsfont }
+\numberwithin{equation}{section}
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+% \newcommand\prefix@section{}
+\makeatother
+
+%% multi col
+\usepackage{multicol}
+
+% hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,   
+    urlcolor=black,
+    filecolor=black,
+} 
+\urlstyle{same}
+
+% colored frames (boxes)
+\usepackage{xcolor}
+\usepackage{mdframed}
+
+% vector arrow with \vv{ }
+\usepackage{esvect}
+
+%\hyphenpenalty 10000
+%\exhyphenpenalty 10000
+%\usepackage[none]{hyphenat}
+%\usepackage[document]{ragged2e}
+
+% strike through text
+\usepackage[normalem]{ulem}
+% \sout{Hello World}
+\title{A1 Diskret Matematik}
+\author{Roar Nind Steffensen (s144107) & Magnus Middelboe Søborg-Madsen (s144063)}
+\date{September 2016}
+
+\begin{document}
+\maketitle
+\section{Opgave A}
+\input{OpgA/OpgaveAa.tex}
+\newpage
+\input{OpgA/OpgaveAb.tex}
+
+\section{Opgave B}
+\input{OpgB/OpgaveB.tex}
+
+\section{Opgave C}
+\input{OpgC/OpgaveC.tex}
+
+\section{Opgave D}
+\input{OpgD/OpgaveD.tex}
+
+\section{Opgave E}
+\input{OpgE/OpgaveE.tex}
+
+
+\end{document}
